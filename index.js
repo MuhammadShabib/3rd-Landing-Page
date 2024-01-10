@@ -51,3 +51,14 @@ document.addEventListener('alpine:init', () => {
 
 const textElement = document.querySelector('#text');
 ityped.init(textElement, { strings: ['متن ساختگی...', 'متن ساختگی با تولید...', 'متن ساختگی با تولید سادگی...'] });
+
+
+// Map
+
+const map = L.map('map').setView([62.20402869999999, 34.352865], 13);
+
+const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+L.marker([62.20402869999999, 34.352865]).bindPopup("MSH").addTo(map).openPopup();
