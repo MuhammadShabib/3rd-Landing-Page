@@ -29,30 +29,31 @@
                 <h2 class="fw-bold mb-4"><span class="text-primary">لورم ایپسوم</span> <span id="text"></span> </h2>
                 <p class="lh-lg">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.</p>
             </div>
-            <div class="row countdown">
+            <!-- counter -->
+            <div x-data="countDown" class="row countdown justify-content-center my-5">
                 <div>
-                    <h3 class="fw-bold">01</h3>
-                    <h5>روز</h5>
+                    <h3 class="fw-bold" x-text="days"></h3>
+                    <h5 class="mb-0">روز</h5>
                 </div>
                 <div>
-                    <h3 class="fw-bold">03</h3>
-                    <h5>ساعت</h5>
+                    <h3 class="fw-bold" x-text="hours"></h3>
+                    <h5 class="mb-0">ساعت</h5>
                 </div>
                 <div>
-                    <h3 class="fw-bold">24</h3>
-                    <h5>دقیقه</h5>
+                    <h3 class="fw-bold" x-text="minutes"></h3>
+                    <h5 class="mb-0">دقیقه</h5>
                 </div>
                 <div>
-                    <h3 class="fw-bold">56</h3>
-                    <h5>ثانیه</h5>
+                    <h3 class="fw-bold" x-text="seconds"></h3>
+                    <h5 class="mb-0">ثانیه</h5>
                 </div>
             </div>
         </div>
     </header>
 
+
     <script src="https://unpkg.com/ityped@1.0.3"></script>
     <script src="index.js"></script>
-
     <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js "></script>
 
 
