@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html x-data="darkMode" lang="fa" dir="rtl" :class="{ 'dark' : darkMode }">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3rd Landing Page</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/bootstrap-icons-1.11.1/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+</head>
+
+<body class="dark-bg-body">
+    <div class="d-flex align-items-center justify-content-end p-4">
+        <i class="bi bi-brightness-high-fill fs-4 ms-2 lh-0 dark-text-white"></i>
+        <div class="form-check form-switch">
+            <input x-model="darkMode" class="form-check-input dark-swich" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        </div>
+        <i class="bi bi-moon-stars-fill fs-5 me-2 lh-0 dark-text-white "></i>
+    </div>
+
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js "></script>
+
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('darkMode', () => ({
+                darkMode: true,
+                init() {
+                    if (localStorage.theme === 'dark') {
+                        this.darkMode = true;
+                    } else {
+                        this.darkMode = false;
+                    }
+                    this.$watch('darkMode', (value) => {
+                        if (value) {
+                            localStorage.theme = 'dark';
+                        } else {
+                            localStorage.theme = 'light';
+
+                        }
+                    })
+                }
+
+            }))
+        })
+    </script>
+</body>
+
+</html>
