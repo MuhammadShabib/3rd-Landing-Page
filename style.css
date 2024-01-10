@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Vazir";
-    src: url(asessts/fonts/Vazir.eot);
-    src: url(asessts/fonts/Vazir.eot?#iefix) format("embedded-opentype"), url(asessts/fonts/Vazir.woff2) format("woff2"), url(asessts/fonts/Vazir.woff)format("woff"), url(asessts/fonts/Vazir.ttf) format("truetype");
+    src: url(assets/fonts/Vazir.eot);
+    src: url(assets/fonts/Vazir.eot?#iefix) format("embedded-opentype"), url(assets/fonts/Vazir.woff2) format("woff2"), url(assets/fonts/Vazir.woff)format("woff"), url(assets/fonts/Vazir.ttf) format("truetype");
 }
 
 body {
@@ -31,4 +31,47 @@ body {
 
 .dark .dark-text-white {
     color: white;
+}
+
+
+/* Header */
+
+.header {
+    padding-top: 70px;
+}
+
+.text-gray {
+    color: #44494e !;
+}
+
+.countdown {}
+
+
+/* ityped.js */
+
+.ityped-cursor {
+    font-size: 2.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
 }
